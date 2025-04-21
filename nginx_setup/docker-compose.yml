@@ -1,0 +1,64 @@
+version: '3'
+
+services:
+  # Next.js applications
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+    networks:
+      - app-network
+    environment:
+      - NODE_ENV=production
+    restart: always
+  
+  #API service instances (three replicas to demonstrate load balancing)
+  api-service-1:
+    build:
+      context: ./api-service
+      dockerfile: dockerfile
+    networks:
+      - app-network
+    environment:
+      - PORT=3001
+    restart: always
+  
+  api-service-2:
+    build:
+      context: ./api-service
+      dockerfile: dockerfile
+    networks:
+      - app-network
+    environment:
+      - PORT=3001
+    restart: always
+  
+  api-service-3:
+    build:
+      context: ./api-service
+      dockerfile: dockerfile
+    networks:
+      - app-network
+    environment:
+      - PORT=3001
+    restart: always
+  
+  #Nginx service for reverse proxy and load balancing
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - api-service-1
+      - api-service-2
+      - api-service-3
+    networks:
+      - app-network
+    restart: always
+
+networks:
+  app-network:
+    driver: bridge
