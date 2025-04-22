@@ -1,0 +1,20 @@
+Streams are a way of handling data that is read or written piece by piece, rather than all at once.
+They are memory-efficient, asynchronous, and event-based
+
+Streams:
+why use Streams:
+1. Memory Efficiency: Streams process data incrementally, consuming and processing data in chunks rather than loading the entire dataset into memeory.
+2. Improved response time: Streams allow for immediate data processing. when a chunk of data arrives, it can be processed without waiting for the entire payload or dataset to be receieved. This reduces latency and improves your application's overall responsiveness.
+3. Scalability for Real-time processing: By handling data chunks, Nodejs streams can efficiently handle large amount of data with limited resources.
+
+When Are Streams Used?
+Reading/writing large files (e.g., logs, video, CSV)
+Network requests/responses (HTTP, sockets)
+Transforming data on the fly (e.g., compression, encryption)
+Real-time applications (e.g., chat, streaming media)
+
+
+Types of streams:
+Readable, Writeable, Duplex, Transform
+
+
