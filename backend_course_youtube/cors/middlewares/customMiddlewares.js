@@ -3,8 +3,6 @@
 export const requestLogger = (req, res, next) => {
     const timeStamp = new Date().toDateString();
     const method = req.method;
-    console.log(`[${new Date().toISOString()}] ${method} ${req.url}`);
-
     const url = req.url;
     const userAgent = req.get("User-Agent");
     console.log(`[${timeStamp}]\n ${method} \n ${url} \n ${userAgent}`);
