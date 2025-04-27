@@ -1,5 +1,5 @@
 import express from 'express';
-import { asyncHandler } from '../middlewares/errorhandlers.js';
+import { AppError, asyncHandler } from '../middlewares/errorhandlers.js';
 
 const router = express.Router();
 const app = express();
@@ -16,6 +16,21 @@ const items = [
 router.get('/items', asyncHandler(async (req, res) =>{
     res.json(items)
 }));
+
+router.post('/item', asyncHandler(async(req, res) => {
+    const content = req.body.name;
+    if(!content){
+        throw new AppError("Item does not exist")
+        // console.log(error)
+    }
+    const newItem = {
+        id: items.length + 1,
+        name: req.body.name
+    }
+
+    items.push(newItem);
+    return res.status(200).json(newItem);
+}))
 
 
 export default router;
