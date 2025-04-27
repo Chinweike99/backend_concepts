@@ -18,14 +18,13 @@ app.use(addTimeStamp);
 
 app.use(express.json());
 app.use(configureCors());
-app.use(rateLimiter(100, 15*60*1000)) // Max of 100 requests in 15 minutes
+app.use(rateLimiter(2, 15*60*1000)) // Max of 100 requests in 15 minutes
 
 app.use(urlVersioning("v1"));
+app.use('/api/v1', itemsRoutes)
+
 app.use('api/v2', headVersioning("v2"));
 app.use('/api/v', contentTypeVersioning("v"));
-
-
-app.use('/api/v1', itemsRoutes)
 
 app.use(globalErrorHandler);
 
@@ -34,7 +33,7 @@ app.get('/', (req, res) => {
     res.send("CORS-enabled server")
 })
 
-app.listen(() =>{
+app.listen(PORT, () =>{
     console.log(`Listening on port ${PORT}`);
 });
 
