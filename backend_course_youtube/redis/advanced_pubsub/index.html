@@ -1,0 +1,118 @@
+// public/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redis Pub/Sub Chat</title>
+  <style>
+    body { margin: 0; padding: 20px; font-family: Arial, sans-serif; }
+    #messages { list-style-type: none; margin: 0; padding: 0; }
+    #messages li { padding: 5px 10px; }
+    #messages li:nth-child(odd) { background: #eee; }
+    .input-area { margin-top: 20px; }
+    #message-input { width: 80%; padding: 10px; }
+    button { padding: 10px; }
+    .rooms { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Redis Pub/Sub Chat</h1>
+  
+  <div class="user-setup">
+    <input id="username" placeholder="Your username" />
+    <button id="set-username">Set Username</button>
+  </div>
+  
+  <div class="rooms">
+    <button class="room-btn" data-room="general">General</button>
+    <button class="room-btn" data-room="tech">Tech</button>
+    <button class="room-btn" data-room="random">Random</button>
+  </div>
+  
+  <h3 id="current-room">Not joined any room</h3>
+  
+  <ul id="messages"></ul>
+  
+  <div class="input-area">
+    <input id="message-input" placeholder="Type a message" />
+    <button id="send-button">Send</button>
+  </div>
+
+  <script src="/socket.io.js"></script>
+  <!-- <script>
+    // Connect to Socket.io
+    const socket = io();
+    
+    // DOM elements
+    const messagesEl = document.getElementById('messages');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+    const usernameInput = document.getElementById('username');
+    const setUsernameBtn = document.getElementById('set-username');
+    const roomButtons = document.querySelectorAll('.room-btn');
+    const currentRoomEl = document.getElementById('current-room');
+    
+    // State
+    let username = '';
+    let currentRoom = '';
+    
+    // Set username
+    setUsernameBtn.addEventListener('click', () => {
+      username = usernameInput.value.trim();
+      if (username) {
+        document.querySelector('.user-setup').style.display = 'none';
+      }
+    });
+    
+    // Join room
+    roomButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const room = btn.getAttribute('data-room');
+        
+        // Leave current room if any
+        if (currentRoom) {
+          socket.emit('leave room', currentRoom);
+        }
+        
+        // Join new room
+        currentRoom = room;
+        socket.emit('join room', room);
+        currentRoomEl.textContent = `Room: ${room}`;
+        
+        // Clear messages
+        messagesEl.innerHTML = '';
+      });
+    });
+    
+    // Send message
+    function sendMessage() {
+      const message = messageInput.value.trim();
+      if (message && username && currentRoom) {
+        socket.emit('chat message', {
+          username,
+          message,
+          room: currentRoom
+        });
+        messageInput.value = '';
+      }
+    }
+    
+    sendButton.addEventListener('click', sendMessage);
+    messageInput.addEventListener('keypress', e => {
+      if (e.key === 'Enter') sendMessage();
+    });
+    
+    // Receive messages
+    socket.on('chat message', data => {
+      const li = document.createElement('li');
+      const time = new Date(data.timestamp).toLocaleTimeString();
+      li.textContent = `[${time}] ${data.username}: ${data.message}`;
+      messagesEl.appendChild(li);
+      
+      // Auto-scroll
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    });
+  </script> -->
+</body>
+</html>
