@@ -11,15 +11,15 @@ export const registerUser = async(req, res) => {
     try {
         const {error} = validateReg(req.body);
         if(error){
-            logger.warn("Validation error", error.details[0].message);
+            logger.warn("Validation error", error.details?.[0]?.message || error.message);
             return res.status(400).json({message: error.message})
         }
 
         const {username, email, password} = req.body
         let user = await User.findOne({ $or : [{email}, {username}]});
         if(user){
-            logger.warn("User exists", error.details[0].message);
-            return res.status(400).status({
+            logger.warn("User exists", {email, username});
+            return res.status(400).json({
                 success: false,
                 message: "User already exists"
             })
@@ -31,7 +31,7 @@ export const registerUser = async(req, res) => {
         await user.save();
         logger.warn("User saved successfully: ", user._id);
 
-        const {accessToken, refreshToken} = generateToken(user);
+        const {accessToken, refreshToken} = await generateToken(user);
         res.status(201).json({
             success: true,
             message: "Account created successfully",
