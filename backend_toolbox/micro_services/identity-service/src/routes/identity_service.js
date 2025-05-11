@@ -1,5 +1,5 @@
 import express from 'express';
-import * as userAuth from '../controllers/indentity_controller';
+import * as userAuth from '../controllers/indentity_controller.js';
 
 const router = express.Router();
 

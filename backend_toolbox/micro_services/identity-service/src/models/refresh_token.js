@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import User from "./User";
+import User from "./User.js";
 
 const refreshTokenSchema = new mongoose.Schema({
     token: {type: String, required: true, unique: true},
