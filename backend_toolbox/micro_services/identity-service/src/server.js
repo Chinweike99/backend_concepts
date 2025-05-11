@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
 import logger from "./utils/logger.js";
 import express from 'express';
 import helmet from 'helmet';
@@ -10,6 +9,7 @@ import rateLimit from 'express-rate-limit';
 import { RedisStore } from 'rate-limit-redis'
 import routes from './routes/identity_service.js'
 import { errorHandler } from "./middlewares/errorHandlers.js";
+import dotenv from 'dotenv'
  
 dotenv.config();
 const app = express();
@@ -23,9 +23,12 @@ app.use(express.json());
 
 
 mongoose
-  .connect(process.env.MONGODB_URL)
+  .connect(process.env.MONGODB_URI)
   .then(() => logger.info("connected to mongoDB"))
   .catch((e) => logger.error("MogoDb connection error", e));
+
+  console.log("\n \nMONGODB_URL, connection successful");
+
 
   // const redisClient = new Redis.createClient(process.env.REDIS_URL);
   const redisClient = new Redis(process.env.REDIS_URL);
@@ -35,7 +38,9 @@ mongoose
     logger.error(error)
   });
 
-
+  redisClient.on('connect', () => {
+    logger.info("Connected to Redis successfully");
+  });
 
 
 // All for logging purposes
@@ -91,7 +96,7 @@ app.use('/api/auth/register', sensitiveEndpointLimiter);
 
 
 // All Routes
-app.use('/app/auth', routes);
+app.use('/api/auth', routes);
 
 // Error Handler
 app.use(errorHandler)
