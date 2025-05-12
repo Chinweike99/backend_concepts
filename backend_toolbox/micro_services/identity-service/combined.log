@@ -331,6 +331,7 @@
 {"level":"warn","message":"Server running on port: http://localhost:3000","service":"identity-service","timestamp":"2025-05-12T07:47:19.241Z"}
 {"level":"info","message":"Connected to Redis successfully","service":"identity-service","timestamp":"2025-05-12T07:47:19.266Z"}
 {"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.qqaodio.mongodb.net","level":"error","message":"MogoDb connection error querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net","service":"identity-service","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-05-12T07:48:55.404Z"}
+<<<<<<< HEAD
 {"level":"info","message":"Recieved POST request to /api/auth/register","service":"identity-service","timestamp":"2025-05-12T12:29:56.650Z"}
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-12T12:29:56.775Z"}
 {"level":"info","message":"Registration data....","service":"identity-service","timestamp":"2025-05-12T12:29:57.733Z"}
@@ -344,3 +345,5 @@
 {"buffer":{"data":[104,33,234,37,205,224,22,169,98,195,110,79],"type":"Buffer"},"level":"warn","message":"User saved successfully: ","service":"identity-service","timestamp":"2025-05-12T12:31:34.065Z"}
 {"level":"info","message":"Recieved POST request to /api/auth/login","service":"identity-service","timestamp":"2025-05-12T12:32:45.836Z"}
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-12T12:32:45.838Z"}
+=======
+>>>>>>> 0da60550d5d3463d82a2b02d0d379f8d43d93f47
