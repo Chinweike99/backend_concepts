@@ -328,3 +328,6 @@
 {"level":"info","message":"Recieved POST request to /api/auth/login","service":"identity-service","timestamp":"2025-05-12T07:06:04.398Z"}
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-12T07:06:04.398Z"}
 {"email":"Jmandaiep@gmail.com","level":"warn","message":"Invalid password attempt","service":"identity-service","timestamp":"2025-05-12T07:06:05.265Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3000","service":"identity-service","timestamp":"2025-05-12T07:47:19.241Z"}
+{"level":"info","message":"Connected to Redis successfully","service":"identity-service","timestamp":"2025-05-12T07:47:19.266Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.qqaodio.mongodb.net","level":"error","message":"MogoDb connection error querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net","service":"identity-service","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-05-12T07:48:55.404Z"}
