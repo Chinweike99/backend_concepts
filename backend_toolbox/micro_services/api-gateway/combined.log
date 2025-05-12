@@ -9,3 +9,5 @@
 {"level":"info","message":"Response recieved from identity service: 200","service":"api-gateway","timestamp":"2025-05-12T12:32:46.570Z"}
 {"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-12T12:35:28.071Z"}
 {"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-12T12:35:28.076Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-12T12:50:52.444Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-12T12:50:52.455Z"}

@@ -3,21 +3,17 @@ import cors from 'cors';
 import helmet from 'helmet';
 import Redis from 'ioredis';
 import dotenv from 'dotenv';
-<<<<<<< HEAD
 import rateLimit from 'express-rate-limit';
 import {RedisStore} from 'rate-limit-redis'
 import logger from './utils/logger.js';
 import proxy from 'express-http-proxy';
 import { errorHandler } from './middlewares/errorHandler.js';
-=======
->>>>>>> 0da60550d5d3463d82a2b02d0d379f8d43d93f47
 
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-<<<<<<< HEAD
 const redisClient = new Redis(process.env.REDIS_URL);
 
 app.use(helmet());
@@ -92,6 +88,3 @@ app.listen(PORT, () => {
 
 
 
-=======
-const redisClient = new Redis(process.env.REDIS_URL)
->>>>>>> 0da60550d5d3463d82a2b02d0d379f8d43d93f47
