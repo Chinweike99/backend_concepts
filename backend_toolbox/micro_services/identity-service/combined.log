@@ -331,3 +331,16 @@
 {"level":"warn","message":"Server running on port: http://localhost:3000","service":"identity-service","timestamp":"2025-05-12T07:47:19.241Z"}
 {"level":"info","message":"Connected to Redis successfully","service":"identity-service","timestamp":"2025-05-12T07:47:19.266Z"}
 {"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.qqaodio.mongodb.net","level":"error","message":"MogoDb connection error querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net","service":"identity-service","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-05-12T07:48:55.404Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/register","service":"identity-service","timestamp":"2025-05-12T12:29:56.650Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-12T12:29:56.775Z"}
+{"level":"info","message":"Registration data....","service":"identity-service","timestamp":"2025-05-12T12:29:57.733Z"}
+{"level":"error","message":"Registration error Operation `users.findOne()` buffering timed out after 10000ms","service":"identity-service","stack":"MongooseError: Operation `users.findOne()` buffering timed out after 10000ms\n    at Timeout.<anonymous> (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/identity-service/node_modules/.pnpm/mongoose@8.14.2/node_modules/mongoose/lib/drivers/node-mongodb-native/collection.js:187:23)\n    at listOnTimeout (node:internal/timers:594:17)\n    at process.processTimers (node:internal/timers:529:7)","timestamp":"2025-05-12T12:30:09.227Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3000","service":"identity-service","timestamp":"2025-05-12T12:31:03.210Z"}
+{"level":"info","message":"Connected to Redis successfully","service":"identity-service","timestamp":"2025-05-12T12:31:03.252Z"}
+{"level":"info","message":"connected to mongoDB","service":"identity-service","timestamp":"2025-05-12T12:31:05.962Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/register","service":"identity-service","timestamp":"2025-05-12T12:31:33.026Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-12T12:31:33.027Z"}
+{"level":"info","message":"Registration data....","service":"identity-service","timestamp":"2025-05-12T12:31:33.051Z"}
+{"buffer":{"data":[104,33,234,37,205,224,22,169,98,195,110,79],"type":"Buffer"},"level":"warn","message":"User saved successfully: ","service":"identity-service","timestamp":"2025-05-12T12:31:34.065Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/login","service":"identity-service","timestamp":"2025-05-12T12:32:45.836Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-12T12:32:45.838Z"}
