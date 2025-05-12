@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      rate-limiter-flexible:
+        specifier: ^7.1.0
+        version: 7.1.0
       socket.io:
         specifier: ^4.8.1
         version: 4.8.1
@@ -74,6 +77,9 @@ packages:
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
+
+  rate-limiter-flexible@7.1.0:
+    resolution: {integrity: sha512-qXYzKWzlTOf7/BNjz1Jj03AgtTHoJZZAiiJ3hjLf8sqeG+EWZLeQ3xYtMPlMZLonlq+OyJUueHyK/H+q2Zc7Qw==}
 
   socket.io-adapter@2.5.5:
     resolution: {integrity: sha512-eLDQas5dzPgOWCk9GuuJC2lBqItuhKI4uxGgo9aIV7MYbk2h9Q6uULEh8WBzThoI7l+qU9Ast9fVUmkqPP9wYg==}
@@ -164,6 +170,8 @@ snapshots:
   negotiator@0.6.3: {}
 
   object-assign@4.1.1: {}
+
+  rate-limiter-flexible@7.1.0: {}
 
   socket.io-adapter@2.5.5:
     dependencies:
