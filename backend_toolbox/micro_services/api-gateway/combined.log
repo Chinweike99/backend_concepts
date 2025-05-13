@@ -28,3 +28,49 @@
 {"level":"info","message":"Recieved POST request to /v1/auth/logout","service":"api-gateway","timestamp":"2025-05-13T06:08:11.582Z"}
 {"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T06:08:11.583Z"}
 {"level":"info","message":"Response recieved from identity service: 200","service":"api-gateway","timestamp":"2025-05-13T06:08:11.780Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-13T18:52:44.571Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-13T18:52:44.687Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/register","service":"api-gateway","timestamp":"2025-05-13T22:12:51.267Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:12:51.307Z"}
+{"level":"info","message":"Response recieved from identity service: 400","service":"api-gateway","timestamp":"2025-05-13T22:12:52.807Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/register","service":"api-gateway","timestamp":"2025-05-13T22:13:07.338Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:13:07.340Z"}
+{"level":"info","message":"Response recieved from identity service: 400","service":"api-gateway","timestamp":"2025-05-13T22:13:08.946Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/register","service":"api-gateway","timestamp":"2025-05-13T22:13:20.973Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:13:20.976Z"}
+{"level":"info","message":"Response recieved from identity service: 201","service":"api-gateway","timestamp":"2025-05-13T22:13:22.846Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-13T22:14:01.877Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:14:01.937Z"}
+{"level":"info","message":"Response recieved from identity service: 200","service":"api-gateway","timestamp":"2025-05-13T22:14:03.189Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/create-post","service":"api-gateway","timestamp":"2025-05-13T22:16:54.859Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:16:54.860Z"}
+{"level":"info","message":"Response recieved from identity service: 404","service":"api-gateway","timestamp":"2025-05-13T22:16:54.899Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/posts/create-post","service":"api-gateway","timestamp":"2025-05-13T22:17:59.661Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:17:59.662Z"}
+{"level":"info","message":"Response recieved from identity service: 404","service":"api-gateway","timestamp":"2025-05-13T22:17:59.688Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/posts/create-post","service":"api-gateway","timestamp":"2025-05-13T22:19:15.525Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:19:15.525Z"}
+{"level":"info","message":"Response recieved from identity service: 404","service":"api-gateway","timestamp":"2025-05-13T22:19:15.542Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/posts/create-post","service":"api-gateway","timestamp":"2025-05-13T22:20:01.117Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:20:01.117Z"}
+{"level":"info","message":"Response recieved from identity service: 404","service":"api-gateway","timestamp":"2025-05-13T22:20:01.179Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/post/create-post","service":"api-gateway","timestamp":"2025-05-13T22:20:43.665Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:20:43.666Z"}
+{"level":"info","message":"Response recieved from identity service: 404","service":"api-gateway","timestamp":"2025-05-13T22:20:43.758Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/post/create-post","service":"api-gateway","timestamp":"2025-05-13T22:26:37.640Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:26:37.641Z"}
+{"level":"info","message":"Response recieved from identity service: 404","service":"api-gateway","timestamp":"2025-05-13T22:26:37.666Z"}
+{"level":"info","message":"Recieved POST request to /v1/create-post","service":"api-gateway","timestamp":"2025-05-13T22:30:47.528Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:30:47.528Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/create-post","service":"api-gateway","timestamp":"2025-05-13T22:31:00.783Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:31:00.783Z"}
+{"level":"info","message":"Response recieved from identity service: 404","service":"api-gateway","timestamp":"2025-05-13T22:31:00.799Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-13T22:33:08.879Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:33:08.880Z"}
+{"level":"info","message":"Response recieved from identity service: 200","service":"api-gateway","timestamp":"2025-05-13T22:33:09.175Z"}
+{"level":"info","message":"Recieved POST request to /v1/posts/create-post","service":"api-gateway","timestamp":"2025-05-13T22:35:48.126Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-13T22:35:48.127Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-13T22:40:11.568Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-13T22:40:11.572Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-13T22:43:39.676Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-13T22:43:39.679Z"}

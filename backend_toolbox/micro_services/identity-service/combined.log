@@ -380,3 +380,36 @@
 {"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T06:11:11.216Z"}
 {"level":"info","message":"Registration data....","service":"identity-service","timestamp":"2025-05-13T06:11:11.222Z"}
 {"email":"AmaechiChima@gmail.com","level":"warn","message":"User exists","service":"identity-service","timestamp":"2025-05-13T06:11:11.573Z","username":"Chima amaechi"}
+{"level":"warn","message":"Server running on port: http://localhost:3000","service":"identity-service","timestamp":"2025-05-13T18:53:01.493Z"}
+{"level":"info","message":"Connected to Redis successfully","service":"identity-service","timestamp":"2025-05-13T18:53:01.509Z"}
+{"level":"info","message":"connected to mongoDB","service":"identity-service","timestamp":"2025-05-13T18:53:03.284Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/register","service":"identity-service","timestamp":"2025-05-13T22:12:52.380Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:12:52.385Z"}
+{"level":"info","message":"Registration data....","service":"identity-service","timestamp":"2025-05-13T22:12:52.646Z"}
+{"level":"warn","message":"Validation error","service":"identity-service","timestamp":"2025-05-13T22:12:52.736Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/register","service":"identity-service","timestamp":"2025-05-13T22:13:07.374Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:13:07.375Z"}
+{"level":"info","message":"Registration data....","service":"identity-service","timestamp":"2025-05-13T22:13:07.528Z"}
+{"email":"Jmandaiep@gmail.com","level":"warn","message":"User exists","service":"identity-service","timestamp":"2025-05-13T22:13:08.942Z","username":"Chidi Nnamdi"}
+{"level":"info","message":"Recieved POST request to /api/auth/register","service":"identity-service","timestamp":"2025-05-13T22:13:20.994Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:13:20.995Z"}
+{"level":"info","message":"Registration data....","service":"identity-service","timestamp":"2025-05-13T22:13:21.030Z"}
+{"buffer":{"data":[104,35,196,1,48,144,232,12,194,16,38,254],"type":"Buffer"},"level":"warn","message":"User saved successfully: ","service":"identity-service","timestamp":"2025-05-13T22:13:22.497Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/login","service":"identity-service","timestamp":"2025-05-13T22:14:01.944Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:14:01.945Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/create-post","service":"identity-service","timestamp":"2025-05-13T22:16:54.893Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:16:54.893Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/posts/create-post","service":"identity-service","timestamp":"2025-05-13T22:17:59.671Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:17:59.672Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/posts/create-post","service":"identity-service","timestamp":"2025-05-13T22:19:15.535Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:19:15.537Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/posts/create-post","service":"identity-service","timestamp":"2025-05-13T22:20:01.175Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:20:01.175Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/post/create-post","service":"identity-service","timestamp":"2025-05-13T22:20:43.752Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:20:43.753Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/post/create-post","service":"identity-service","timestamp":"2025-05-13T22:26:37.650Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:26:37.652Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/create-post","service":"identity-service","timestamp":"2025-05-13T22:31:00.789Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:31:00.790Z"}
+{"level":"info","message":"Recieved POST request to /api/auth/login","service":"identity-service","timestamp":"2025-05-13T22:33:08.889Z"}
+{"level":"info","message":"Request body, [object Object]","service":"identity-service","timestamp":"2025-05-13T22:33:08.890Z"}

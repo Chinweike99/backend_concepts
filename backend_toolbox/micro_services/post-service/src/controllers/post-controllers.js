@@ -1,9 +1,5 @@
-import Post from "../models/Post";
-import logger from "../utils/logger"
-
-
-
-
+import Post from "../models/Post.js";
+import logger from "../utils/logger.js"
 
 //
 export const createPost =  async(req, res)=> {
