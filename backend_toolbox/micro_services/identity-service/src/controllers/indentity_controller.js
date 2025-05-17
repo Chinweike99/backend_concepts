@@ -92,6 +92,7 @@ export const loginUser = async (req, res) => {
       success: true,
       message: "Loggin successfully",
       accessToken,
+      
     });
     return user;
 

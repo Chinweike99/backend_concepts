@@ -8,6 +8,7 @@ import {RedisStore} from 'rate-limit-redis'
 import logger from './utils/logger.js';
 import proxy from 'express-http-proxy';
 import { errorHandler } from './middlewares/errorHandler.js';
+import { validatePostToken } from './middlewares/authMiddleware.js';
 
 
 dotenv.config();
@@ -59,17 +60,39 @@ const proxyOptions = {
     }
 }
 
+
+// Setting up proxy for identity service
 app.use('/v1/auth', proxy(process.env.IDENTITY_SERVICE_URL, {
     ...proxyOptions,
     proxyReqOptDecorator: (proxyReqOpts, srcReq)=>{
-        proxyReqOpts.headers['Content-Type'] = "application/json"
+        console.log("Forwarding user:", srcReq.user); 
+        proxyReqOpts.headers['Content-Type'] = "application/json";
+        proxyReqOpts.headers['x-user-id'] = srcReq.user.userId;
         return proxyReqOpts
     },
     userResDecorator: (proxyRes, proxyResData, userReq, uerRes) => {
         logger.info(`Response recieved from identity service: ${proxyRes.statusCode}`);
         return proxyResData;
     }
+}));
+
+
+// Setting up proxy for our post service
+app.use('/v1/posts', validatePostToken, proxy(process.env.POST_SERVICE_URL, {
+    ...proxyOptions,
+    proxyReqOptDecorator: (proxyReqOpts, srcReq)=>{
+        proxyReqOpts.headers['Content-Type'] = "application/json";
+        proxyReqOpts.headers['x-user-id'] = srcReq.user.userId;
+        return proxyReqOpts
+    },
+    userResDecorator: (proxyRes, proxyResData, userReq, uerRes) => {
+        logger.info(`Response recieved from id post service: ${proxyRes.statusCode}`);
+        return proxyResData;
+    }
 }))
+
+
+
 
 app.use(errorHandler)
 
@@ -78,6 +101,7 @@ app.listen(PORT, () => {
     console.log(`Gateway running on http://localhost${PORT}`);
     logger.info(`API GATEWAY is running on port ${PORT}`);
     logger.info(`IDENTITY SERVICE is running on ${process.env.IDENTITY_SERVICE_URL}`)
+    logger.info(`POST SERVICE is running on ${process.env.POST_SERVICE_URL}`)
 })
 
 
