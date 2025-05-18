@@ -67,7 +67,7 @@ app.use('/v1/auth', proxy(process.env.IDENTITY_SERVICE_URL, {
     proxyReqOptDecorator: (proxyReqOpts, srcReq)=>{
         console.log("Forwarding user:", srcReq.user); 
         proxyReqOpts.headers['Content-Type'] = "application/json";
-        proxyReqOpts.headers['x-user-id'] = srcReq.user.userId;
+        // proxyReqOpts.headers['x-user-id'] = srcReq.user.userId;
         return proxyReqOpts
     },
     userResDecorator: (proxyRes, proxyResData, userReq, uerRes) => {
@@ -86,7 +86,7 @@ app.use('/v1/posts', validatePostToken, proxy(process.env.POST_SERVICE_URL, {
         return proxyReqOpts
     },
     userResDecorator: (proxyRes, proxyResData, userReq, uerRes) => {
-        logger.info(`Response recieved from id post service: ${proxyRes.statusCode}`);
+        logger.info(`Response recieved from post service: ${proxyRes.statusCode}`);
         return proxyResData;
     }
 }))

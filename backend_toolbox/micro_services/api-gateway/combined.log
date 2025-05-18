@@ -173,3 +173,48 @@
 {"level":"info","message":"Recieved POST request to /v1/posts/create-post","service":"api-gateway","timestamp":"2025-05-17T16:28:55.948Z"}
 {"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-17T16:28:55.949Z"}
 {"level":"info","message":"Response recieved from id post service: 201","service":"api-gateway","timestamp":"2025-05-17T16:28:56.318Z"}
+{"level":"info","message":"Recieved POST request to /v1/posts/create-post","service":"api-gateway","timestamp":"2025-05-18T01:38:18.161Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:38:18.162Z"}
+{"level":"warn","message":"Invalid token","service":"api-gateway","timestamp":"2025-05-18T01:38:18.185Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-18T01:39:19.315Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:39:19.316Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:39:19.324Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-18T01:40:05.171Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-18T01:40:05.176Z"}
+{"level":"info","message":"POST SERVICE is running on http://localhost:3002","service":"api-gateway","timestamp":"2025-05-18T01:40:05.177Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-18T01:41:51.677Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:41:51.678Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:41:51.692Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-18T01:43:48.748Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:43:48.749Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:43:48.759Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-18T01:44:38.927Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-18T01:44:38.933Z"}
+{"level":"info","message":"POST SERVICE is running on http://localhost:3002","service":"api-gateway","timestamp":"2025-05-18T01:44:38.934Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-18T01:45:07.949Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:45:07.951Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:45:07.965Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-18T01:45:28.175Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-18T01:45:28.204Z"}
+{"level":"info","message":"POST SERVICE is running on http://localhost:3002","service":"api-gateway","timestamp":"2025-05-18T01:45:28.206Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-18T01:51:02.064Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:51:02.066Z"}
+{"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:51:02.079Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-18T01:54:39.365Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-18T01:54:39.370Z"}
+{"level":"info","message":"POST SERVICE is running on http://localhost:3002","service":"api-gateway","timestamp":"2025-05-18T01:54:39.371Z"}
+{"level":"info","message":"Recieved POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-05-18T01:55:04.335Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:55:04.337Z"}
+{"level":"info","message":"Response recieved from identity service: 200","service":"api-gateway","timestamp":"2025-05-18T01:55:04.857Z"}
+{"level":"info","message":"Recieved POST request to /v1/posts/create-post","service":"api-gateway","timestamp":"2025-05-18T01:57:31.844Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:57:31.845Z"}
+{"level":"info","message":"Response recieved from id post service: 201","service":"api-gateway","timestamp":"2025-05-18T01:57:32.201Z"}
+{"level":"info","message":"Recieved POST request to /v1/posts/create-post","service":"api-gateway","timestamp":"2025-05-18T01:57:46.915Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T01:57:46.916Z"}
+{"level":"info","message":"Response recieved from id post service: 201","service":"api-gateway","timestamp":"2025-05-18T01:57:47.140Z"}
+{"level":"info","message":"Recieved POST request to /v1/posts/create-post","service":"api-gateway","timestamp":"2025-05-18T02:05:23.417Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-05-18T02:05:23.418Z"}
+{"level":"warn","message":"Access attempt failed, no valid token","service":"api-gateway","timestamp":"2025-05-18T02:05:23.421Z"}
+{"level":"info","message":"API GATEWAY is running on port 3001","service":"api-gateway","timestamp":"2025-05-18T02:10:06.930Z"}
+{"level":"info","message":"IDENTITY SERVICE is running on http://localhost:3000","service":"api-gateway","timestamp":"2025-05-18T02:10:06.938Z"}
+{"level":"info","message":"POST SERVICE is running on http://localhost:3002","service":"api-gateway","timestamp":"2025-05-18T02:10:06.939Z"}
