@@ -11,6 +11,9 @@ const router = express.Router();
 
 router.use(authicateRequest)
 router.post('/create-post', postController.createPost);
+router.get('/getall-posts', postController.getAllPost)
+router.get('/:id', postController.getSinglePost);
+router.delete('/delete/:id', postController.deletePost);
 
 export default router;
 

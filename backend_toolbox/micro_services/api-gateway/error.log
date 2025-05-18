@@ -18,3 +18,8 @@
 {"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:43:48.759Z"}
 {"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:45:07.965Z"}
 {"level":"error","message":"Proxy error: Cannot read properties of undefined (reading 'userId')","service":"api-gateway","timestamp":"2025-05-18T01:51:02.079Z"}
+{"level":"error","message":"Proxy error: socket hang up","service":"api-gateway","timestamp":"2025-05-18T03:18:27.312Z"}
+{"level":"error","message":"Proxy error: socket hang up","service":"api-gateway","timestamp":"2025-05-18T03:18:27.333Z"}
+{"level":"error","message":"Proxy error: socket hang up","service":"api-gateway","timestamp":"2025-05-18T03:19:25.947Z"}
+{"level":"error","message":"Proxy error: socket hang up","service":"api-gateway","timestamp":"2025-05-18T03:28:55.437Z"}
+{"level":"error","message":"Proxy error: connect ECONNREFUSED 127.0.0.1:3000","service":"api-gateway","timestamp":"2025-05-18T05:19:12.042Z"}

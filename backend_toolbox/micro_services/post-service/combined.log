@@ -38,3 +38,240 @@
 {"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T01:57:46.933Z"}
 {"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T01:57:46.934Z"}
 {"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T01:57:47.137Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:17:22.428Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:17:24.090Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:17:57.575Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:17:59.224Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:22:26.994Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:22:28.385Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:23:51.851Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:23:53.807Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:24:38.015Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:24:39.744Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:25:56.860Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:25:58.909Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:26:47.627Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:26:47.629Z"}
+{"_message":"Post validation failed","errors":{"content":{"kind":"required","message":"Path `content` is required.","name":"ValidatorError","path":"content","properties":{"message":"Path `content` is required.","path":"content","type":"required"}}},"level":"error","message":"Error creating post Post validation failed: content: Path `content` is required.","service":"post-service","stack":"ValidationError: Post validation failed: content: Path `content` is required.\n    at Document.invalidate (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/document.js:3343:32)\n    at /home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/document.js:3104:17\n    at /home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/schemaType.js:1407:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-05-18T02:26:47.704Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:27:16.026Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:27:16.027Z"}
+{"_message":"Post validation failed","errors":{"content":{"kind":"required","message":"Path `content` is required.","name":"ValidatorError","path":"content","properties":{"message":"Path `content` is required.","path":"content","type":"required"}}},"level":"error","message":"Error creating post Post validation failed: content: Path `content` is required.","service":"post-service","stack":"ValidationError: Post validation failed: content: Path `content` is required.\n    at Document.invalidate (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/document.js:3343:32)\n    at /home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/document.js:3104:17\n    at /home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/schemaType.js:1407:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-05-18T02:27:16.040Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:27:59.164Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:28:01.152Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:28:19.555Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:28:19.556Z"}
+{"_message":"Post validation failed","errors":{"content":{"kind":"required","message":"Path `content` is required.","name":"ValidatorError","path":"content","properties":{"message":"Path `content` is required.","path":"content","type":"required"}}},"level":"error","message":"Error creating post Post validation failed: content: Path `content` is required.","service":"post-service","stack":"ValidationError: Post validation failed: content: Path `content` is required.\n    at Document.invalidate (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/document.js:3343:32)\n    at /home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/document.js:3104:17\n    at /home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/schemaType.js:1407:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)","timestamp":"2025-05-18T02:28:19.706Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:31:02.938Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:31:12.991Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:31:42.007Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:31:42.009Z"}
+{"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T02:32:03.565Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:35:10.158Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:35:11.950Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:35:33.530Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:35:33.534Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T02:35:33.649Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:36:45.440Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:36:47.647Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:37:03.093Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:37:03.094Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T02:37:03.183Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:38:27.391Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:38:27.393Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T02:38:27.396Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T02:41:37.303Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T02:41:38.766Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:41:55.770Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:41:55.771Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T02:41:55.856Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:42:03.889Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:42:03.890Z"}
+{"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T02:42:04.090Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:43:15.516Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:43:15.518Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T02:43:15.521Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T02:43:31.226Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T02:43:31.226Z"}
+{"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T02:43:31.981Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:03:26.912Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.qqaodio.mongodb.net","level":"error","message":"Mongo connection error querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net","service":"post-service","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-05-18T03:05:13.066Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:05:19.054Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:05:43.062Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:06:12.403Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:06:14.237Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:08:22.894Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:08:22.895Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:13:48.566Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:13:48.568Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:18:29.761Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:18:31.341Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:18:32.673Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:18:32.674Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:19:29.422Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:19:30.951Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:19:42.427Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:19:42.430Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:28:57.806Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:28:59.058Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:29:01.021Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:29:02.446Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:34:39.803Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:34:41.962Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:41:41.207Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:41:42.765Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:41:46.015Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:41:46.016Z"}
+{"level":"error","message":"Error getting all posts req.redisClient.setEx is not a function","service":"post-service","stack":"TypeError: req.redisClient.setEx is not a function\n    at getAllPost (file:///home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/src/controllers/post-controllers.js:107:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-05-18T03:41:46.340Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:42:15.449Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:42:16.835Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:42:23.136Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:42:23.137Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:42:39.459Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:42:41.381Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:42:41.538Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:42:41.539Z"}
+{"level":"error","message":"Error getting all posts req.redisClient.setEx is not a function","service":"post-service","stack":"TypeError: req.redisClient.setEx is not a function\n    at getAllPost (file:///home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/src/controllers/post-controllers.js:107:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-05-18T03:42:42.382Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:43:08.036Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T03:43:09.536Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:43:13.261Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:43:13.262Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:48:30.269Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:48:30.271Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:48:47.421Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:48:47.422Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:50:17.034Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:50:17.035Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:12.256Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:12.257Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:15.211Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:15.212Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:17.339Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:17.340Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:19.239Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:19.240Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:21.004Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:21.005Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:22.781Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:22.782Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:24.486Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:24.487Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T03:52:26.184Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T03:52:26.185Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T03:57:36.331Z"}
+{"code":"ETIMEOUT","hostname":"_mongodb._tcp.cluster0.qqaodio.mongodb.net","level":"error","message":"Mongo connection error querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net","service":"post-service","stack":"Error: querySrv ETIMEOUT _mongodb._tcp.cluster0.qqaodio.mongodb.net\n    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17)","syscall":"querySrv","timestamp":"2025-05-18T03:59:09.656Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:02:59.215Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:03:02.947Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T04:03:08.078Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:03:08.078Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T04:03:12.945Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:03:12.946Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T04:03:15.262Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:03:15.263Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T04:04:33.368Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:04:33.369Z"}
+{"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T04:04:33.665Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T04:04:46.147Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:04:46.148Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:12:47.093Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:12:49.340Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:13:55.748Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:13:57.762Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:14:27.950Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:14:29.431Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:16:33.599Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:16:35.139Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:17:12.248Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:17:13.508Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getsingle-post:68295c5106ca755ee819acdf","service":"post-service","timestamp":"2025-05-18T04:18:57.155Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:18:57.156Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getsingle-post:2","service":"post-service","timestamp":"2025-05-18T04:19:09.527Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:19:09.533Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:19:51.420Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:19:53.085Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/2","service":"post-service","timestamp":"2025-05-18T04:20:10.102Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:20:10.104Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/682948fb235b45bdb12061b9","service":"post-service","timestamp":"2025-05-18T04:20:54.098Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:20:54.100Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:25:44.248Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:25:45.800Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:26:10.381Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:26:12.315Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/682948fb235b45bdb12061b9","service":"post-service","timestamp":"2025-05-18T04:26:17.035Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:26:17.036Z"}
+{"level":"error","message":"Error getting a post by ID cachedKey is not defined","service":"post-service","stack":"ReferenceError: cachedKey is not defined\n    at getSinglePost (file:///home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/src/controllers/post-controllers.js:120:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-05-18T04:26:17.242Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:26:44.185Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:26:45.928Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/682948fb235b45bdb12061b9","service":"post-service","timestamp":"2025-05-18T04:26:48.193Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:26:48.194Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/68293e9a0c3557b8e4bd2e99","service":"post-service","timestamp":"2025-05-18T04:27:20.505Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:27:20.507Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:43:59.700Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:44:01.150Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:44:23.791Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:44:25.079Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:45:00.189Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:45:01.702Z"}
+{"level":"info","message":"Recieved DELETE request to /api/posts/68293e9a0c3557b8e4bd2e99","service":"post-service","timestamp":"2025-05-18T04:45:04.012Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:45:04.014Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:45:37.467Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:45:39.421Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:46:31.125Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:46:32.459Z"}
+{"level":"info","message":"Recieved DELETE request to /api/posts/68293e9a0c3557b8e4bd2e99","service":"post-service","timestamp":"2025-05-18T04:46:34.615Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:46:34.616Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T04:47:52.680Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T04:47:54.424Z"}
+{"level":"info","message":"Recieved DELETE request to /api/posts/68293e9a0c3557b8e4bd2e99","service":"post-service","timestamp":"2025-05-18T04:47:59.612Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T04:47:59.612Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T05:16:35.294Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T05:16:37.446Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T05:37:06.230Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:37:06.231Z"}
+{"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T05:37:06.536Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T05:38:20.783Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:38:20.785Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T05:38:20.817Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T05:38:46.796Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:38:46.798Z"}
+{"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T05:38:47.023Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T05:39:03.132Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:39:03.133Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T05:39:03.145Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T05:40:00.146Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:40:00.147Z"}
+{"level":"warn","message":"Validating create post error","service":"post-service","timestamp":"2025-05-18T05:40:00.150Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T05:44:42.074Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T05:44:44.194Z"}
+{"level":"info","message":"Recieved POST request to /api/posts/create-post","service":"post-service","timestamp":"2025-05-18T05:44:49.728Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:44:49.729Z"}
+{"level":"info","message":"Post creation successful","service":"post-service","timestamp":"2025-05-18T05:44:50.099Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/68293e9a0c3557b8e4bd2e99","service":"post-service","timestamp":"2025-05-18T05:45:38.123Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:45:38.124Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T05:46:50.599Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:46:50.601Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/682973d121ca40c11ec333c1","service":"post-service","timestamp":"2025-05-18T05:48:10.438Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:48:10.440Z"}
+{"level":"info","message":"Recieved DELETE request to /api/posts/68293e9a0c3557b8e4bd2e99","service":"post-service","timestamp":"2025-05-18T05:48:30.020Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:48:30.021Z"}
+{"level":"info","message":"Recieved DELETE request to /api/posts/682973d121ca40c11ec333c1","service":"post-service","timestamp":"2025-05-18T05:49:00.735Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:49:00.737Z"}
+{"level":"info","message":"Recieved DELETE request to /api/posts/682973d121ca40c11ec333c1","service":"post-service","timestamp":"2025-05-18T05:50:21.874Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:50:21.875Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T05:52:01.504Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T05:52:03.766Z"}
+{"level":"info","message":"Recieved DELETE request to /api/posts/delete/682973d121ca40c11ec333c1","service":"post-service","timestamp":"2025-05-18T05:52:15.615Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:52:15.617Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T05:52:31.191Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:52:31.193Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/682973d121ca40c11ec333c1","service":"post-service","timestamp":"2025-05-18T05:59:12.749Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T05:59:12.750Z"}
+{"code":"ERR_HTTP_HEADERS_SENT","level":"error","message":"Error getting a post by ID Cannot set headers after they are sent to the client","service":"post-service","stack":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:699:11)\n    at ServerResponse.header (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/express/lib/response.js:684:10)\n    at ServerResponse.send (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/express/lib/response.js:161:12)\n    at ServerResponse.json (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/express/lib/response.js:250:15)\n    at getSinglePost (file:///home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/src/controllers/post-controllers.js:132:13)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-05-18T05:59:14.335Z"}
+{"level":"error","message":"Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n    at ServerResponse.setHeader (node:_http_outgoing:699:11)\n    at ServerResponse.header (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/express/lib/response.js:684:10)\n    at ServerResponse.send (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/express/lib/response.js:161:12)\n    at ServerResponse.json (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/express/lib/response.js:250:15)\n    at getSinglePost (file:///home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/src/controllers/post-controllers.js:136:25)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","service":"post-service","timestamp":"2025-05-18T05:59:14.360Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T20:30:34.298Z"}
+{"errorLabelSet":{},"level":"error","message":"Mongo connection error Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-raiamme-shard-00-00.qqaodio.mongodb.net:27017":{"$clusterTime":null,"address":"ac-raiamme-shard-00-00.qqaodio.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":24957643,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-raiamme-shard-00-01.qqaodio.mongodb.net:27017":{"$clusterTime":null,"address":"ac-raiamme-shard-00-01.qqaodio.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":24958127,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-raiamme-shard-00-02.qqaodio.mongodb.net:27017":{"$clusterTime":null,"address":"ac-raiamme-shard-00-02.qqaodio.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":24957890,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-jrjudw-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"service":"post-service","stack":"MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/connection.js:1096:11)","timestamp":"2025-05-18T20:31:04.604Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T20:32:27.213Z"}
+{"errorLabelSet":{},"level":"error","message":"Mongo connection error Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"ac-raiamme-shard-00-00.qqaodio.mongodb.net:27017":{"$clusterTime":null,"address":"ac-raiamme-shard-00-00.qqaodio.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":25070809,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-raiamme-shard-00-01.qqaodio.mongodb.net:27017":{"$clusterTime":null,"address":"ac-raiamme-shard-00-01.qqaodio.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":25070933,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-raiamme-shard-00-02.qqaodio.mongodb.net:27017":{"$clusterTime":null,"address":"ac-raiamme-shard-00-02.qqaodio.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":25070925,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-jrjudw-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"service":"post-service","stack":"MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/\n    at _handleConnectionErrors (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/home/chinweike_akwolu/backend_concepts/backend_toolbox/micro_services/post-service/node_modules/mongoose/lib/connection.js:1096:11)","timestamp":"2025-05-18T20:32:57.391Z"}
+{"level":"warn","message":"Server running on port: http://localhost:3002","service":"post-service","timestamp":"2025-05-18T20:51:13.410Z"}
+{"level":"info","message":"connected to mongoDb","service":"post-service","timestamp":"2025-05-18T20:51:15.394Z"}
+{"level":"info","message":"Recieved GET request to /api/posts/getall-posts","service":"post-service","timestamp":"2025-05-18T21:10:27.809Z"}
+{"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-05-18T21:10:27.810Z"}
