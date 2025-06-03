@@ -15,16 +15,14 @@ export const registerUser = async (input: RegisterUserInput) => {
         if (existingUser) {
             throw new Error('Email already in use');
           }
+        // const hashedPassword = await argon2.hash(password);
 
-        // Hash password 
-        const hashedPassword = await argon2.hash(password)
-
-          // Create user
     const user = await User.create({
         firstName,
         lastName,
         email,
-        password: hashedPassword,
+        // password: hashedPassword,
+        password,
         phoneNumber,
       });
 
@@ -50,7 +48,7 @@ export const loginUser = async (input: LoginUserInput) => {
       // Find user by email
       const user = await User.findOne({ email });
       if (!user) {
-        throw new Error('Invalid email or password');
+        throw new Error('Invalid email password');
       }
   
       // Verify password

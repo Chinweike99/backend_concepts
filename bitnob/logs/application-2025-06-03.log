@@ -1,0 +1,76 @@
+2025-06-03 05:57:29 info: 🚀 Server running on port 3000
+2025-06-03 05:58:36 info: 🚀 Server running on port 3000
+2025-06-03 06:00:29 info: 🚀 Server running on port 3000
+2025-06-03 06:02:09 info: 🚀 Server running on port 3000
+2025-06-03 06:05:06 info: 🚀 Server running on port 3000
+2025-06-03 06:10:23 info: 🚀 Server running on port 3000
+2025-06-03 06:10:23 info: 🚀 Server running on port 3000
+2025-06-03 06:10:29 info: 🚀 Server running on port 3000
+2025-06-03 06:12:50 info: 🚀 Server running on port 3000
+2025-06-03 06:14:49 error: Validation error:
+2025-06-03 06:17:58 error: Validation error:
+2025-06-03 06:18:20 error: Validation error:
+2025-06-03 06:18:24 error: Validation error:
+2025-06-03 06:18:24 info: 🚀 Server running on port 3000
+2025-06-03 06:19:41 error: Validation error:
+2025-06-03 06:20:01 info: 🚀 Server running on port 3000
+2025-06-03 06:20:14 error: Validation error:
+2025-06-03 06:26:08 error: Validation error:
+2025-06-03 06:26:20 error: Error: Email already in use
+    at registerUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:16:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:13:31)
+2025-06-03 06:27:38 error: MongoServerError: E11000 duplicate key error collection: test.users index: phoneNumber_1 dup key: { phoneNumber: "09012345643" }
+    at InsertOneOperation.execute (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\insert.ts:88:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\execute_operation.ts:283:14)
+    at async executeOperation (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\execute_operation.ts:115:12)
+    at async Collection.insertOne (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\collection.ts:285:12)
+2025-06-03 06:36:33 info: 🚀 Server running on port 3000
+2025-06-03 06:36:33 info: 🚀 Server running on port 3000
+2025-06-03 06:36:36 error: Error: Email already in use
+    at registerUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:16:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:13:31)
+2025-06-03 06:47:37 info: 🚀 Server running on port 3000
+2025-06-03 06:48:04 error: Error: Email already in use
+    at registerUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:16:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:13:31)
+2025-06-03 06:49:07 info: 🚀 Server running on port 3000
+2025-06-03 06:49:09 error: Error: Email already in use
+    at registerUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:16:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:13:31)
+2025-06-03 06:54:10 error: Validation error:
+2025-06-03 06:56:22 error: Error: Invalid email or password
+    at loginUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:59:15)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:23:31)
+2025-06-03 06:57:15 error: Error: Invalid email or password
+    at loginUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:59:15)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:23:31)
+2025-06-03 06:57:54 error: MongoServerError: E11000 duplicate key error collection: test.users index: phoneNumber_1 dup key: { phoneNumber: "09019175603" }
+    at InsertOneOperation.execute (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\insert.ts:88:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\execute_operation.ts:283:14)
+    at async executeOperation (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\execute_operation.ts:115:12)
+    at async Collection.insertOne (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\collection.ts:285:12)
+2025-06-03 07:00:26 error: Error: Invalid email or password
+    at loginUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:59:15)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:23:31)
+2025-06-03 07:01:29 info: 🚀 Server running on port 3000
+2025-06-03 07:02:10 error: Error: Invalid email
+    at loginUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:56:15)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:23:31)
+2025-06-03 07:19:05 info: 🚀 Server running on port 3000
+2025-06-03 07:19:13 error: Error: Email already in use
+    at registerUser (C:\Users\User\CODES\backend_concepts\bitnob\src\services\auth.service.ts:16:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\auth.ts:13:31)
+2025-06-03 07:19:21 error: MongoServerError: E11000 duplicate key error collection: test.users index: phoneNumber_1 dup key: { phoneNumber: "09019175623" }
+    at InsertOneOperation.execute (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\insert.ts:88:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async tryOperation (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\execute_operation.ts:283:14)
+    at async executeOperation (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\execute_operation.ts:115:12)
+    at async Collection.insertOne (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\collection.ts:285:12)
+2025-06-03 07:21:45 info: 🚀 Server running on port 3000
