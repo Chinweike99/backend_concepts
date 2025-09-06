@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --watch src --ext ts --exec \"tsx server.ts\""
+    "dev": "nodemon --watch src --ext ts --exec \"tsx src/server.ts\"",
+    "client": "nodemon --watch src --ext ts --exec \"tsx src/client.ts\""
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
     "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
