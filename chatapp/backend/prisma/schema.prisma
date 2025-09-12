@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  username  String   @unique
+  isAdmin   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  sentMessages     Message[]    @relation("SenderMessages")
+  receivedMessages Message[]    @relation("ReceiverMessages")
+  roomMemberships  RoomMember[]
+  createdRooms     Room[]       @relation("RoomCreator")
+}
+
+model Room {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  isPublic  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  creator   User         @relation("RoomCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+  creatorId String
+  members   RoomMember[]
+  messages  Message[]
+}
+
+model RoomMember {
+  id     String @id @default(cuid())
+  userId String
+  roomId String
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  room Room @relation(fields: [roomId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, roomId])
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  content   String
+  roomId    String?
+  senderId  String
+  receiverId String?
+  isPrivate Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  sender   User   @relation("SenderMessages", fields: [senderId], references: [id], onDelete: Cascade)
+  receiver User?  @relation("ReceiverMessages", fields: [receiverId], references: [id], onDelete: Cascade)
+  room     Room?  @relation(fields: [roomId], references: [id], onDelete: Cascade)
+}

@@ -1,0 +1,32 @@
+{
+  "name": "socket.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch src --ext ts --exec \"tsx src/server.ts\"",
+    "client": "nodemon --watch src --ext ts --exec \"tsx src/client.ts\"",
+    "index": "nodemon --watch src --ext ts --exec \"tsx src/index.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@socket.io/redis-adapter": "^8.3.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.1",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "redis": "^5.8.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/redis": "^4.0.10",
+    "@types/socket.io": "^3.0.1"
+  }
+}
