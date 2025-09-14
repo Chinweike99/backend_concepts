@@ -1,4 +1,4 @@
-import { ClientStory } from '@/types'
+import { ClientStory } from '@/index'
 
 interface StoryCardProps {
   story: ClientStory

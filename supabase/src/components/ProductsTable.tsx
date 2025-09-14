@@ -1,6 +1,6 @@
 'use client'
 
-import { Product } from '@/types'
+import { Product } from '@/index'
 
 interface ProductsTableProps {
   products: Product[]

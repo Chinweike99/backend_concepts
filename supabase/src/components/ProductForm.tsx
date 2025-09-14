@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Product } from '@/types'
+import { Product } from '@/index'
 
 interface ProductFormProps {
   product?: Product

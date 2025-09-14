@@ -1,5 +1,5 @@
 import TeamCard from '@/components/TeamCard'
-import { TeamMember } from '@/types'
+import { TeamMember } from '@/index'
 
 async function getTeamMembers(): Promise<TeamMember[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/teams`, {

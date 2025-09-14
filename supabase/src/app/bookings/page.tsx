@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import BookingForm from '@/components/BookingForm'
 import ProductsGrid from '@/components/ProductsGrid'
-import { Product } from '@/types'
+import { Product } from '@/index'
 
 export default function BookingsPage() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)

@@ -48,3 +48,14 @@ By combining Supabase’s managed PostgreSQL with Next.js, this platform is both
 - Git  
 
 ---
+### supabase bucket
+![App Screenshot](./public/screenshots/supabasebucket.png)
+
+### supabase query
+![App Screenshot](./public/screenshots/supabasequery.png)
+
+### Table
+![App Screenshot](./public/screenshots/supabaseTable.png)
+
+### booking confirmation mail
+![App Screenshot](./public/screenshots/supabasemail.png)

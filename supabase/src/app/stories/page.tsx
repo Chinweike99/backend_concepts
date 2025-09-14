@@ -1,5 +1,5 @@
 import StoryCard from '@/components/StoryCard'
-import { ClientStory } from '@/types'
+import { ClientStory } from '@/index'
 
 async function getStories(): Promise<ClientStory[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/stories`, {

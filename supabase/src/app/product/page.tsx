@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import ProductsTable from '@/components/ProductsTable'
 import ProductForm from '@/components/ProductForm'
-import { Product } from '@/types'
+import { Product } from '@/index'
 
 
 export default function AdminProductsPage() {

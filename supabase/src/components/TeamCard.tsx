@@ -1,4 +1,4 @@
-import { TeamMember } from '@/types'
+import { TeamMember } from '@/index'
 
 interface TeamCardProps {
   member: TeamMember
