@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 
 interface ProductsGridProps {
-    onProductSelect?: (productId: string) => void
+    onProductSelect?: (productId: Product) => void
 }
 
 export default function ProductsGrid({ onProductSelect }: ProductsGridProps) {
@@ -38,7 +38,7 @@ export default function ProductsGrid({ onProductSelect }: ProductsGridProps) {
         <div
           key={product.id}
           className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
-          onClick={() => onProductSelect?.(product as any)}
+          onClick={() => onProductSelect?.(product)}
         >
           <img
             src={product.image_url || '/placeholder.jpg'}
