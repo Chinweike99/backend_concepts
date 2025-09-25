@@ -8,47 +8,66 @@ export const createOrderHandler = (req: Request, res: Response) => {
     const { userId } = req.params;
     const { shippingInfo } = req.body;
 
+    if (!userId) {
+      return res.status(400).json({ error: 'User ID is required in the route' });
+    }
+
     if (!shippingInfo || !shippingInfo.address || !shippingInfo.email) {
       return res.status(400).json({ error: 'Shipping information is required' });
     }
 
-    console.log("Shipping info", shippingInfo)
+    console.log("Shipping info", shippingInfo);
+
     const cart = getCart(userId);
-    console.log("Caart info ......", cart)
-    if (!cart.items.length) {
+    console.log("Cart info ......", cart);
+
+    if (!cart || !cart.items || cart.items.length === 0) {
       return res.status(400).json({ error: 'Cart is empty' });
     }
-    console.log("Caart info", cart)
+
+    console.log("Cart info", cart);
+
     const order = createOrder(userId, cart, shippingInfo);
-    console.log("Order info", order)
+    console.log("Order info", order);
+
     // Clear cart after successful order
     clearCart(userId);
 
     const channel = getChannel();
-    
+
     // Send to order processing queue
-    channel.sendToQueue('order_processing', Buffer.from(JSON.stringify({
-      orderId: order.id,
-      userId,
-      total: order.total,
-      timestamp: new Date().toISOString()
-    })), { persistent: true });
+    channel.sendToQueue(
+      'order_processing',
+      Buffer.from(JSON.stringify({
+        orderId: order.id,
+        userId,
+        total: order.total,
+        timestamp: new Date().toISOString()
+      })),
+      { persistent: true }
+    );
 
     // Send to email notifications queue
-    channel.sendToQueue('email_notifications', Buffer.from(JSON.stringify({
-      type: 'ORDER_CONFIRMATION',
-      email: shippingInfo.email,
-      orderId: order.id,
-      total: order.total,
-      items: order.items,
-      timestamp: new Date().toISOString()
-    })), { persistent: true });
+    channel.sendToQueue(
+      'email_notifications',
+      Buffer.from(JSON.stringify({
+        type: 'ORDER_CONFIRMATION',
+        email: shippingInfo.email,
+        orderId: order.id,
+        total: order.total,
+        items: order.items,
+        timestamp: new Date().toISOString()
+      })),
+      { persistent: true }
+    );
 
     res.status(201).json(order);
+
   } catch (error: any) {
     res.status(400).json({ error: `Unable to create order ${error.message}` });
   }
 };
+
 
 export const getOrdersHandler = (req: Request, res: Response) => {
   try {
