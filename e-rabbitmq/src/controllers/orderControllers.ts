@@ -29,13 +29,9 @@ export const createOrderHandler = (req: Request, res: Response) => {
 
     const order = createOrder(userId, cart, shippingInfo);
     console.log("Order info", order);
-
-    // Clear cart after successful order
     clearCart(userId);
 
     const channel = getChannel();
-
-    // Send to order processing queue
     channel.sendToQueue(
       'order_processing',
       Buffer.from(JSON.stringify({
