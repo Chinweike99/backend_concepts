@@ -74,3 +74,30 @@
     at async executeOperation (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\operations\execute_operation.ts:115:12)
     at async Collection.insertOne (C:\Users\User\CODES\backend_concepts\bitnob\node_modules\mongodb\src\collection.ts:285:12)
 2025-06-03 07:21:45 info: 🚀 Server running on port 3000
+2025-06-03 07:28:28 info: 🚀 Server running on port 3000
+2025-06-03 08:49:42 info: 🚀 Server running on port 3000
+2025-06-03 09:02:10 info: 🚀 Server running on port 3000
+2025-06-03 09:09:34 info: 🚀 Server running on port 3000
+2025-06-03 09:13:21 info: 🚀 Server running on port 3000
+2025-06-03 09:14:37 info: 🚀 Server running on port 3000
+2025-06-03 09:36:50 info: 🚀 Server running on port 3000
+2025-06-03 09:37:51 info: 🚀 Server running on port 3000
+2025-06-03 09:56:20 info: 🚀 Server running on port 3000
+2025-06-03 10:05:20 info: 🚀 Server running on port 3000
+2025-06-03 10:15:13 error: Validation error:
+2025-06-03 10:17:47 error: Validation error:
+2025-06-03 10:18:29 error: Validation error:
+2025-06-03 10:37:24 info: 🚀 Server running on port 3000
+2025-06-03 10:42:54 info: 🚀 Server running on port 3000
+2025-06-03 10:43:09 error: Error: User not found
+    at activateWallet (C:\Users\User\CODES\backend_concepts\bitnob\src\services\wallet.service.ts:14:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\wallet.ts:18:22)
+2025-06-03 10:53:35 error: Error: User not found
+    at activateWallet (C:\Users\User\CODES\backend_concepts\bitnob\src\services\wallet.service.ts:14:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\wallet.ts:18:22)
+2025-06-03 10:53:41 error: Error: User not found
+    at activateWallet (C:\Users\User\CODES\backend_concepts\bitnob\src\services\wallet.service.ts:14:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\User\CODES\backend_concepts\bitnob\src\routes\wallet.ts:18:22)
