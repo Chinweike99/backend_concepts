@@ -1,14 +1,16 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UsePipes, ValidationPipe } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Prisma } from '@prisma/client';
+import { CreateUserDto } from './dto/create-user.dto';
 
 @Controller('users')
 export class UsersController {
     constructor(private readonly userService: UsersService){}
 
     @Post()
-    create(@Body() data: Prisma.UserCreateInput){
-        return this.userService.create(data);
+    @UsePipes(new ValidationPipe({whitelist: true}))
+    create(@Body()dto: CreateUserDto){
+        return this.userService.create(dto);
     };
 
     @Get()
