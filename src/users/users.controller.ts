@@ -1,7 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Req, UseGuards, UsePipes, ValidationPipe } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { Prisma } from '@prisma/client';
 import { CreateUserDto } from './dto/create-user.dto';
+import { JwtAuthGuard } from 'src/auth/jwt.guard';
+import type { Request } from 'express';
 
 @Controller('users')
 export class UsersController {
@@ -13,8 +15,10 @@ export class UsersController {
         return this.userService.create(dto);
     };
 
+    @UseGuards(JwtAuthGuard)
     @Get()
-    findAll(){
+    findAll(@Req() req: Request){
+        console.log("User", req.user)
         return this.userService.findAll()
     }
 
