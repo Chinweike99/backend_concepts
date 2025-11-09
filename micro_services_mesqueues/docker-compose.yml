@@ -1,1 +1,41 @@
-ver
+services:
+  # Message Queue
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: notification_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # PostrgreSQL for user service
+  user-db:
+    image: postgres:17.5
+    container_name: user-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: user_service
+    ports:
+      - "5432:5432"
+    volumes:
+      - user_db_data:/var/lib/postgresql/data
+
+  # Redis for Caching
+  redis:
+    image: redis
+    container_name: notification_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  user_db_data:
+  template_db_data:
