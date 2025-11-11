@@ -63,6 +63,25 @@ app.post("/chat/stream", async (req, res) => {
  * Embedding endpoint
  * POST /embed
  */
+// app.post("/embed", async (req, res) => {
+//   try {
+//     const { input, model = "mxbai-embed-large" } = req.body;
+
+//     const response = await client.embeddings({
+//       model,
+//       input,
+//     });
+
+//     const vector = response.embeddings?.[0] || response.embeddings || [];
+
+//     res.json({
+//       vector
+//     });
+//   } catch (err) {
+//     res.status(500).json({ error: String(err) });
+//   }
+// });
+
 app.post("/embed", async (req, res) => {
   try {
     const { input, model = "mxbai-embed-large" } = req.body;
@@ -72,13 +91,17 @@ app.post("/embed", async (req, res) => {
       input,
     });
 
-    res.json({
-      vector: response.embedding,
-    });
+    // Ollama embeddings API returns an array of embeddings
+    const vector = response.embeddings?.[0] || response.embedding || [];
+
+    res.json({ vector });
   } catch (err) {
     res.status(500).json({ error: String(err) });
   }
 });
+
+
+
 
 app.listen(3000, () => {
   console.log("🚀 Server running on http://localhost:3000");

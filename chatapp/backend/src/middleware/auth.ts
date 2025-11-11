@@ -22,8 +22,6 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
 export const requireAdmin = (req: Request, res: Response, next: NextFunction): void => {
   const user = (req as any).user;
   
-  // This will be implemented after we add admin check to the user model
-  // For now, we'll assume all users are not admin
   if (!user || !user.isAdmin) {
     res.status(403).json({ error: 'Admin access required' });
     return;
