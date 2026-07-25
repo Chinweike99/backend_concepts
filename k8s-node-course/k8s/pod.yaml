@@ -1,0 +1,15 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: backend-pod
+
+spec:
+  containers:
+    - name: backend-container
+      image: k8s-node-course:v2
+      imagePullPolicy: Never
+
+      ports:
+        - containerPort: 3000
