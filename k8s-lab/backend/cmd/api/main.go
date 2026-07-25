@@ -20,6 +20,8 @@ func main() {
 	router.GET("api/products", handlers.GetProducts)
 	router.GET("api/orders", handlers.GetOrders)
 	router.GET("api/debug", handlers.GetDebug)
+	router.GET("api/health", handlers.Health)
+	router.GET("api/readiness", handlers.Readiness)
 
 	router.Run(":8080")
 }
