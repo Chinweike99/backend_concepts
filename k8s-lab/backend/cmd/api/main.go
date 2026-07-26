@@ -4,11 +4,14 @@ import (
 	"net/http"
 
 	"github.com/chinweike99/k8s-lab/backend/internal/handlers"
+	"github.com/chinweike99/k8s-lab/backend/internal/middleware"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	router := gin.Default()
+	router := gin.New()
+	router.Use(gin.Recovery())
+	router.Use(middleware.RequestLogger())
 
 
 	router.GET("/", func(c *gin.Context){
