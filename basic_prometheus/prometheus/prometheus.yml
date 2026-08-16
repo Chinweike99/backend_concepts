@@ -1,30 +1,34 @@
 global:
-  scrape_interval: 15s # How often prometheus scrapes targets
+  scrape_interval: 15s
   evaluation_interval: 15s
 
+# Alertmanager configuration
 alerting:
   alertmanagers:
     - static_configs:
-        - targets: []
+        - targets:
+            - 'alertmanager:9093'  # Service name in docker-compose
 
-# Rules files for alerts
+# Load rules from this file
 rule_files:
-  - "rules.yml" # Loads our rules
+  - "rules.yml"
 
-
-# The actual scrape config
+# Scrape configurations
 scrape_configs:
-  - job_name: 'go_app'
-    # Override global defaults for this job
-    scrape_interval: 5s
-    scrape_timeout: 3s
-    metrics_path: '/metrics'
+  # Job 1: Your Go application
+  - job_name: 'go-app'
+    scrape_interval: 5s  # Faster interval for critical app
     static_configs:
-      - targets:
-          - 'go-app:8080'
+      - targets: ['go-app:8080']
         labels:
-          applications: 'go-api'
+          application: 'go-api'
+          environment: 'development'
+
+  # Job 2: Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          application: 'prometheus'
           environment: 'development'
           team: 'backend'
-
-

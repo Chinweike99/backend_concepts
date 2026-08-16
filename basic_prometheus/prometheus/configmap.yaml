@@ -8,57 +8,78 @@ data:
     global:
       scrape_interval: 15s
       evaluation_interval: 15s
+      external_labels:
+        cluster: 'kubernetes'
+        environment: 'production'
 
-    # Alertmanager configuration
     alerting:
       alertmanagers:
         - static_configs:
             - targets: ['alertmanager-service:9093']
+          timeout: 10s
 
-    # Load recording and alerting rules
     rule_files:
       - "/etc/prometheus/rules/*.yml"
 
-    # Scrape configuration
     scrape_configs:
-      # Job 1: Scrape your Go application using Kubernetes service discovery
+      # Scrape Kubernetes pods with annotations
       - job_name: 'kubernetes-pods'
         kubernetes_sd_configs:
           - role: pod
+        scrape_interval: 10s
+        scrape_timeout: 8s
+        
         relabel_configs:
           # Only scrape pods with annotation prometheus.io/scrape: "true"
           - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
             action: keep
             regex: true
           
-          # Get the port from annotation
+          # Get metrics path from annotation or default to /metrics
+          - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+            action: replace
+            target_label: __metrics_path__
+            regex: (.+)
+            replacement: $1
+          
+          # Get port from annotation
           - source_labels: [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
             action: replace
             regex: ([^:]+)(?::\d+)?;(\d+)
             replacement: $1:$2
             target_label: __address__
           
-          # Get the metrics path from annotation
-          - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
-            action: replace
-            target_label: __metrics_path__
-            regex: (.+)
-          
-          # Copy pod labels to Prometheus labels
+          # Copy all pod labels to Prometheus labels
           - action: labelmap
             regex: __meta_kubernetes_pod_label_(.+)
           
-          # Add namespace as a label
+          # Add namespace as label
           - source_labels: [__meta_kubernetes_namespace]
             action: replace
-            target_label: namespace
+            target_label: kubernetes_namespace
           
-          # Add pod name as a label
+          # Add pod name as label
           - source_labels: [__meta_kubernetes_pod_name]
             action: replace
-            target_label: pod
+            target_label: kubernetes_pod_name
+          
+          # Add node name as label
+          - source_labels: [__meta_kubernetes_pod_node_name]
+            action: replace
+            target_label: kubernetes_node
 
-      # Job 2: Scrape Prometheus itself (so you can monitor Prometheus)
+      # Scrape Prometheus itself
       - job_name: 'prometheus'
         static_configs:
           - targets: ['localhost:9090']
+            labels:
+              component: 'prometheus'
+
+      # Scrape Kubernetes API server (optional - needs RBAC)
+      # - job_name: 'kubernetes-apiservers'
+      #   kubernetes_sd_configs:
+      #     - role: endpoints
+      #   relabel_configs:
+      #     - source_labels: [__meta_kubernetes_namespace, __meta_kubernetes_service_name]
+      #       action: keep
+      #       regex: default;kubernetes

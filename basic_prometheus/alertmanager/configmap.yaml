@@ -12,8 +12,8 @@ data:
       
       # SMTP configuration for email
       smtp_smarthost: 'smtp.gmail.com:587'
-      smtp_from: 'alerts@yourcompany.com'
-      smtp_auth_username: 'alerts@yourcompany.com'
+      smtp_from: 'mail56382cd@gmail.com'
+      smtp_auth_username: 'mail56382cd@gmail.com'
       smtp_auth_password: 'your-app-password'
       smtp_require_tls: true
 
@@ -62,7 +62,7 @@ data:
     receivers:
       - name: 'email-notifications'
         email_configs:
-          - to: 'team@yourcompany.com'
+          - to: 'innocentakwolu1@gmail.com'
             send_resolved: true  # Send notification when alert resolves
             
       - name: 'pagerduty-critical'

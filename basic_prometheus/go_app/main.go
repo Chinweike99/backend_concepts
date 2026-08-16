@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
+	"math/rand"
 	"net/http"
-	"os"
 	"strconv"
 	"time"
 
@@ -29,8 +29,9 @@ var activeRequests = prometheus.NewGauge(
 
 var httpRequestDuration = prometheus.NewHistogramVec(
 	prometheus.HistogramOpts{
-		Name: "http_request_duration_seconds",
-		Help: "HTTP request duration in seconds",
+		Name:    "http_request_duration_seconds",
+		Help:    "HTTP request duration in seconds",
+		Buckets: prometheus.DefBuckets,
 	},
 	[]string{"method", "endpoint", "status"},
 )
@@ -49,21 +50,17 @@ func (w *statusResponseWriter) Write(body []byte) (int, error) {
 	if w.statusCode == 0 {
 		w.statusCode = http.StatusOK
 	}
-
 	return w.ResponseWriter.Write(body)
 }
 
 func metricsMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-
-		// Don't instrument the Prometheus metrics endpoint itself.
 		if r.URL.Path == "/metrics" {
 			next.ServeHTTP(w, r)
 			return
 		}
 
 		start := time.Now()
-
 		activeRequests.Inc()
 
 		sw := &statusResponseWriter{
@@ -73,7 +70,6 @@ func metricsMiddleware(next http.Handler) http.Handler {
 		next.ServeHTTP(sw, r)
 
 		duration := time.Since(start).Seconds()
-
 		activeRequests.Dec()
 
 		status := strconv.Itoa(sw.statusCode)
@@ -93,39 +89,66 @@ func metricsMiddleware(next http.Handler) http.Handler {
 }
 
 func main() {
-
 	prometheus.MustRegister(httpRequestsTotal)
 	prometheus.MustRegister(activeRequests)
 	prometheus.MustRegister(httpRequestDuration)
 
 	mux := http.NewServeMux()
 
+	// Health endpoint
+	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		fmt.Fprintln(w, "OK")
+	})
+
+	// Root endpoint
 	// mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	// 	// Simulate some work with random delay
+	// 	time.Sleep(time.Duration(rand.Intn(50)) * time.Millisecond)
 	// 	fmt.Fprintln(w, "Hello from Go!")
 	// })
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "Hello from Go!")
-    fmt.Fprintln(w, "PID:", os.Getpid())
+		// Check if it's the root path
+		if r.URL.Path == "/" {
+			// Simulate some work with random delay
+			time.Sleep(time.Duration(rand.Intn(50)) * time.Millisecond)
+			fmt.Fprintln(w, "Hello from Go!")
+			return
+		}
+		
+		// All other paths return 404
+		w.WriteHeader(http.StatusNotFound)
+		fmt.Fprintf(w, "404 Not Found: %s\n", r.URL.Path)
 	})
 
+	// Users endpoint
 	mux.HandleFunc("/users", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Users endpoint")
+		// Simulate database query
+		time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)
+		
+		// Randomly return errors (10% chance)
+		if rand.Intn(10) == 0 {
+			w.WriteHeader(http.StatusInternalServerError)
+			fmt.Fprintln(w, "Database error")
+			return
+		}
+		
+		fmt.Fprintln(w, "Users endpoint - List of users")
 	})
 
+	// Orders endpoint
 	mux.HandleFunc("/orders", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintln(w, "Orders endpoint")
+		// Simulate slower endpoint
+		time.Sleep(time.Duration(rand.Intn(200)) * time.Millisecond)
+		fmt.Fprintln(w, "Orders endpoint - List of orders")
 	})
 
+	// Metrics endpoint
 	mux.Handle("/metrics", promhttp.Handler())
 
 	handler := metricsMiddleware(mux)
 
 	log.Println("Server running on :8080")
-
-	err := http.ListenAndServe(":8080", handler)
-
-	if err != nil {
-		log.Fatal(err)
-	}
+	log.Fatal(http.ListenAndServe(":8080", handler))
 }

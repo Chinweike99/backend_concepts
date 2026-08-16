@@ -5,6 +5,7 @@ metadata:
   namespace: monitoring
   labels:
     app: go-app
+    component: api
 spec:
   selector:
     app: go-app
@@ -12,4 +13,6 @@ spec:
   - port: 8080
     targetPort: 8080
     name: http
+    protocol: TCP
   type: ClusterIP # Internal service only
+  sessionAffinity: None
