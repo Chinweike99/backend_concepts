@@ -5,6 +5,7 @@ metadata:
   namespace: monitoring
   labels:
     app: alertmanager
+    component: monitoring
 spec:
   selector:
     app: alertmanager
@@ -12,4 +13,5 @@ spec:
   - port: 9093
     targetPort: 9093
     name: http
+    protocol: TCP
   type: ClusterIP

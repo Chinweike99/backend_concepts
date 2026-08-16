@@ -5,102 +5,61 @@ metadata:
   namespace: monitoring
 data:
   alertmanager.yml: |
-    # Global configuration - applies to all receivers
     global:
-      # How long to wait before sending notifications
       resolve_timeout: 5m
-      
-      # SMTP configuration for email
+      # SMTP configuration (replace with yours)
       smtp_smarthost: 'smtp.gmail.com:587'
-      smtp_from: 'mail56382cd@gmail.com'
-      smtp_auth_username: 'mail56382cd@gmail.com'
+      smtp_from: 'mail66838vs@gmail.com'
+      smtp_auth_username: 'mail66838vs@gmail.com'
       smtp_auth_password: 'your-app-password'
       smtp_require_tls: true
 
-    # The root route - all alerts go through this
     route:
-      # Group alerts by these labels
-      group_by: ['alertname', 'cluster', 'namespace']
-      
-      # How long to wait to group alerts before sending
+      group_by: ['alertname', 'namespace']
       group_wait: 30s
-      
-      # How long to wait before sending updates about grouped alerts
       group_interval: 5m
-      
-      # How long to wait before resending the same alert
       repeat_interval: 4h
+      receiver: 'default-receiver'
       
-      # Default receiver if no routes match
-      receiver: 'email-notifications'
-      
-      # Child routes - more specific routing
       routes:
-        # Critical alerts go to PagerDuty
         - match:
             severity: 'critical'
-          receiver: 'pagerduty-critical'
+          receiver: 'critical-receiver'
           continue: true
         
-        # Warning alerts go to Slack
         - match:
             severity: 'warning'
-          receiver: 'slack-warnings'
-          continue: true
-        
-        # Database alerts go to database team
-        - match:
-            team: 'database'
-          receiver: 'database-team-email'
-        
-        # Frontend alerts go to frontend team
-        - match:
-            team: 'frontend'
-          receiver: 'frontend-team-slack'
+          receiver: 'slack-receiver'
 
-    # Define the receivers
     receivers:
-      - name: 'email-notifications'
+      - name: 'default-receiver'
         email_configs:
-          - to: 'innocentakwolu1@gmail.com'
-            send_resolved: true  # Send notification when alert resolves
-            
-      - name: 'pagerduty-critical'
-        pagerduty_configs:
-          - service_key: 'your-pagerduty-service-key'
-            send_resolved: true
-            
-      - name: 'slack-warnings'
-        slack_configs:
-          - api_url: 'https://hooks.slack.com/services/your/webhook/url'
-            channel: '#alerts'
-            title: 'Warning Alert'
-            text: '{{ range .Alerts }}{{ .Annotations.summary }}\n{{ end }}'
-            send_resolved: true
-            
-      - name: 'database-team-email'
-        email_configs:
-          - to: 'database-team@yourcompany.com'
-            send_resolved: true
-            
-      - name: 'frontend-team-slack'
-        slack_configs:
-          - api_url: 'https://hooks.slack.com/services/your/webhook/url'
-            channel: '#frontend-alerts'
+          - to: 'team@yourcompany.com'
             send_resolved: true
 
-    # Inhibition rules - prevent duplicate alerts
+      - name: 'critical-receiver'
+        webhook_configs:
+          - url: 'http://webhook-service:8080/webhook'
+            send_resolved: true
+        email_configs:
+          - to: 'oncall@yourcompany.com'
+            send_resolved: true
+
+      - name: 'slack-receiver'
+        slack_configs:
+          - api_url: 'https://hooks.slack.com/services/YOUR/WEBHOOK/URL'
+            channel: '#alerts'
+            title: '⚠️ {{ .GroupLabels.alertname }}'
+            text: |
+              *Severity:* {{ .CommonLabels.severity }}
+              *Namespace:* {{ .CommonLabels.kubernetes_namespace }}
+              *Description:* {{ .CommonAnnotations.description }}
+              *Summary:* {{ .CommonAnnotations.summary }}
+            send_resolved: true
+
     inhibit_rules:
-      # If critical alert is firing, don't send warning for same alertname
       - source_match:
           severity: 'critical'
         target_match:
           severity: 'warning'
-        equal: ['alertname', 'namespace']
-      
-      # If entire service is down, don't send alerts about individual parts
-      - source_match:
-          alertname: 'ServiceDown'
-        target_match:
-          alertname: 'EndpointDown'
-        equal: ['namespace', 'service']
+        equal: ['alertname', 'kubernetes_namespace']

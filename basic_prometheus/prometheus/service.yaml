@@ -5,6 +5,7 @@ metadata:
   namespace: monitoring
   labels:
     app: prometheus
+    component: monitoring
 spec:
   selector:
     app: prometheus
@@ -12,4 +13,5 @@ spec:
   - port: 9090
     targetPort: 9090
     name: http
+    protocol: TCP
   type: ClusterIP
