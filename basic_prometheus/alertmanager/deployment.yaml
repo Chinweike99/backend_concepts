@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alertmanager
+  namespace: monitoring
+  labels:
+    app: alertmanager
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alertmanager
+  template:
+    metadata:
+      labels:
+        app: alertmanager
+    spec:
+      containers:
+      - name: alertmanager
+        image: prom/alertmanager:latest
+        args:
+          - '--config.file=/etc/alertmanager/alertmanager.yml'
+          - '--storage.path=/alertmanager'
+          - '--web.listen-address=:9093'
+          - '--cluster.listen-address='
+        ports:
+        - containerPort: 9093
+          name: http
+        volumeMounts:
+          # Mount the ConfigMap as a file
+          - name: alertmanager-config
+            mountPath: /etc/alertmanager/alertmanager.yml
+            subPath: alertmanager.yml
+          # Mount storage for alert state
+          - name: alertmanager-storage
+            mountPath: /alertmanager
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+      volumes:
+        - name: alertmanager-config
+          configMap:
+            name: alertmanager-config
+        - name: alertmanager-storage
+          emptyDir: {}  # Temporary storage - use PersistentVolume for production

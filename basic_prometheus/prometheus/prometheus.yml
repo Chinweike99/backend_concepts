@@ -1,0 +1,30 @@
+global:
+  scrape_interval: 15s # How often prometheus scrapes targets
+  evaluation_interval: 15s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+# Rules files for alerts
+rule_files:
+  - "rules.yml" # Loads our rules
+
+
+# The actual scrape config
+scrape_configs:
+  - job_name: 'go_app'
+    # Override global defaults for this job
+    scrape_interval: 5s
+    scrape_timeout: 3s
+    metrics_path: '/metrics'
+    static_configs:
+      - targets:
+          - 'go-app:8080'
+        labels:
+          applications: 'go-api'
+          environment: 'development'
+          team: 'backend'
+
+

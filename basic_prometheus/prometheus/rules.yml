@@ -1,0 +1,53 @@
+groups:
+  - name: api_metrics
+    interval: 30s
+    rules:
+      # Request rate per endpoint
+      - record: api:request_rate:1m
+        expr: sum(rate(http_requests_total[1m])) by (endpoint)
+
+      # Erro rate overall
+      - record: api:error_rate:1m
+        expr: sum(rate(http_requests_total{status=~"4..|5.."}[1m])) / sum(rate(http_requests_total[1m])) * 100
+
+      # 95th percentile latency
+      - record: api:p95_latency:5m
+        expr: histogram_quantile(0.95, sum(rate(http_request_duration_bucket[5m])) by (le))
+
+      # 99th percentile latency
+      - record: api:p99_latency:5m
+        expr: histogram_quantile(0.99, sum(rate(http_request_duration_bucket[5m])) by (le))
+    
+
+  - name: api_alerts
+    interval: 15s
+    rules:
+      - alert: HighErrorRate
+        expr: api:error_rate:1m > 5
+        for: 3m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Error rate is above 5%"
+          description: "Error rate is {{ $value }}% for the last 3 minutes"
+
+      - alert: ServiceDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service {{ $labels.job }} is down"
+          description: "Service has been down for 1 minute"
+
+      - alert: NoTraffic
+        expr: rate(http_requests_total[5m]) == 0
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "No traffic detected"
+          description: "Zero requests in the last 10 minutes"
+      
+      
+
